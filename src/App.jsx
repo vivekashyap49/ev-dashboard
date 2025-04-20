@@ -1,9 +1,8 @@
-
-import './App.css'
-import Header from "./components/header"
-import data from "./assets/data/Electric_Vehicle_Population_Data.json"
-import Dashboard from "./components/dashboard";
-import { DarkModeProvider } from './context/DarkModeContext';
+import "./App.css";
+import Header from "./components/header";
+import data from "./assets/data/Electric_Vehicle_Population_Data.json";
+import Dashboard from "./components/Dashboard";
+import { DarkModeProvider } from "./context/DarkModeContext";
 
 function App() {
   return (
