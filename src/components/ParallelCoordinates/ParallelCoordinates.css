@@ -1,0 +1,105 @@
+.parallel-coordinates-container {
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+}
+
+.parallel-coordinates-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.parallel-coordinates-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.parallel-coordinates-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-xs) 0 0;
+}
+
+.parallel-coordinates-visualization {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%;
+}
+
+.parallel-coordinates-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.axis-line {
+  stroke: var(--color-border);
+  stroke-width: 1;
+}
+
+.axis-label {
+  font-size: 12px;
+  fill: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.tick-line {
+  stroke: var(--color-border);
+  stroke-width: 1;
+}
+
+.tick-label {
+  font-size: 10px;
+  fill: var(--color-text-secondary);
+}
+
+.data-line {
+  fill: none;
+  stroke-width: 1.5;
+  transition: all 0.2s ease;
+}
+
+.data-line.active {
+  stroke: var(--color-primary);
+  opacity: 0.6;
+}
+
+.data-line.highlighted {
+  stroke: var(--color-success);
+  stroke-width: 2.5;
+  opacity: 1;
+  z-index: 1;
+}
+
+.data-line.muted {
+  stroke: var(--color-text-secondary);
+  opacity: 0.1;
+}
+
+.parallel-coordinates-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--spacing-sm);
+  transform: translate(-50%, -100%);
+  margin-top: -8px;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-dimension {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 2px;
+}
+
+.tooltip-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}

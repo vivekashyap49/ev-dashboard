@@ -1,0 +1,13 @@
+/* Custom styles that complement Tailwind CSS */
+
+/* Any custom animations or styles that can't be easily achieved with Tailwind */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom styles for specific components if needed */

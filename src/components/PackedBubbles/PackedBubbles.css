@@ -1,0 +1,166 @@
+.packed-bubbles-container {
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+}
+
+.packed-bubbles-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.packed-bubbles-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.packed-bubbles-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-xs) 0 0;
+}
+
+.packed-bubbles-visualization {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+  margin-bottom: var(--spacing-lg);
+}
+
+.packed-bubbles-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.bubble-group {
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bubble-group:hover {
+  transform: scale(1.05);
+}
+
+.bubble-group.selected {
+  transform: scale(1.1);
+}
+
+.bubble {
+  transition: fill 0.3s ease;
+  stroke: var(--color-surface);
+  stroke-width: 1;
+}
+
+.bubble-group:hover .bubble {
+  filter: brightness(1.1);
+}
+
+.bubble-label {
+  font-size: 12px;
+  fill: var(--color-text-primary);
+  pointer-events: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.bubble-value {
+  font-size: 10px;
+  fill: var(--color-text-secondary);
+  pointer-events: none;
+}
+
+.packed-bubbles-tooltip {
+  position: absolute;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: var(--spacing-sm);
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-header {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.value-row,
+.depth-row,
+.metadata-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  font-size: 0.75rem;
+}
+
+.value-row span:first-child,
+.depth-row span:first-child,
+.metadata-row span:first-child {
+  color: var(--color-text-secondary);
+}
+
+.value-row span:last-child,
+.depth-row span:last-child,
+.metadata-row span:last-child {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.packed-bubbles-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  padding: var(--spacing-lg) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.legend-label {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.packed-bubbles-controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.control-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.control-button:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-primary);
+}

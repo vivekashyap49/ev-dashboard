@@ -1,0 +1,79 @@
+/* Night Mode CSS variables for eye strain reduction */
+
+:root {
+  /* Default light mode variables */
+  --bg-primary: #F5F5F0;
+  --bg-secondary: #FFFFFF;
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --accent-color: #4285F4;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Apply night mode CSS variables to Tailwind classes */
+.dark {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  --tw-shadow-color: var(--shadow-color);
+}
+
+/* Background colors */
+.bg-white {
+  background-color: var(--bg-secondary);
+}
+
+.dark .dark\:bg-gray-800 {
+  background-color: var(--bg-primary);
+}
+
+.dark .dark\:bg-gray-700 {
+  background-color: var(--bg-secondary);
+}
+
+/* Text colors */
+.text-gray-800 {
+  color: var(--text-primary);
+}
+
+.text-gray-700 {
+  color: var(--text-primary);
+}
+
+.text-gray-600 {
+  color: var(--text-secondary);
+}
+
+.dark .dark\:text-white {
+  color: var(--text-primary);
+}
+
+.dark .dark\:text-gray-200 {
+  color: var(--text-primary);
+}
+
+.dark .dark\:text-gray-300 {
+  color: var(--text-secondary);
+}
+
+/* Accent colors - for charts, buttons, etc. */
+.text-blue-600 {
+  color: var(--accent-color);
+}
+
+.dark .dark\:text-blue-400 {
+  color: var(--accent-color);
+}
+
+/* Shadow effects */
+.shadow-md {
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+/* Transitions for smoother theme switching */
+.bg-white,
+.text-gray-800,
+.text-gray-700,
+.text-gray-600,
+.shadow-md {
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}

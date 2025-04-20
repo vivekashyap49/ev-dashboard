@@ -1,0 +1,96 @@
+.gauge-container {
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+}
+
+.gauge-header {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.gauge-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.gauge-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-xs) 0 0;
+}
+
+.gauge-visualization {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%;
+}
+
+.gauge-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.gauge-background {
+  fill: none;
+  stroke: var(--color-surface-alt);
+  stroke-width: 12;
+  stroke-linecap: round;
+}
+
+.gauge-value {
+  fill: none;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transition: all 0.5s ease-out;
+}
+
+.gauge-tick {
+  stroke: var(--color-text-secondary);
+  stroke-width: 1;
+}
+
+.gauge-tick.major {
+  stroke-width: 2;
+}
+
+.gauge-label {
+  fill: var(--color-text-primary);
+  font-size: 24px;
+  font-weight: 600;
+  text-anchor: middle;
+}
+
+.gauge-sublabel {
+  fill: var(--color-text-secondary);
+  font-size: 14px;
+  text-anchor: middle;
+}
+
+.gauge-legend {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legend-label {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}

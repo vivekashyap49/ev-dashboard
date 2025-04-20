@@ -1,0 +1,130 @@
+.matrix-plot-container {
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+}
+
+.matrix-plot-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.matrix-plot-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.matrix-plot-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-xs) 0 0;
+}
+
+.matrix-plot-visualization {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  margin-bottom: var(--spacing-lg);
+}
+
+.matrix-plot-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.matrix-label {
+  font-size: 12px;
+  fill: var(--color-text-secondary);
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+.matrix-label:hover,
+.matrix-label.selected {
+  fill: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.matrix-cell-group {
+  cursor: pointer;
+}
+
+.matrix-cell {
+  transition: opacity 0.2s ease, stroke 0.2s ease;
+  stroke: var(--color-surface);
+  stroke-width: 1;
+}
+
+.matrix-cell:hover {
+  opacity: 0.8;
+}
+
+.matrix-cell.highlighted {
+  stroke: var(--color-text-primary);
+  stroke-width: 2;
+}
+
+.cell-value {
+  font-size: 10px;
+  fill: var(--color-text-primary);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.matrix-plot-tooltip {
+  position: absolute;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: var(--spacing-sm);
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-header {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tooltip-content {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.matrix-plot-legend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.legend-gradient {
+  display: flex;
+  width: 200px;
+  height: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gradient {
+  flex: 1;
+  height: 100%;
+}
+
+.legend-labels {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}

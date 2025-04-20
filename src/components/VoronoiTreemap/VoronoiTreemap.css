@@ -1,0 +1,141 @@
+.voronoi-treemap-container {
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+}
+
+.voronoi-treemap-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.voronoi-treemap-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.voronoi-treemap-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-xs) 0 0;
+}
+
+.voronoi-treemap-visualization {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+  margin-bottom: var(--spacing-lg);
+}
+
+.voronoi-treemap-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.cell-group {
+  transition: transform 0.3s ease;
+}
+
+.voronoi-cell {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  stroke: var(--color-surface);
+  stroke-width: 1;
+}
+
+.voronoi-cell:hover {
+  filter: brightness(1.1);
+}
+
+.voronoi-cell.hovered {
+  filter: brightness(1.2);
+  stroke-width: 2;
+  stroke: var(--color-text-primary);
+}
+
+.cell-label {
+  font-size: 12px;
+  fill: var(--color-text-primary);
+  pointer-events: none;
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.voronoi-tooltip {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: var(--spacing-sm);
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-header {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.tooltip-value {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.tooltip-metadata {
+  margin-top: var(--spacing-xs);
+  padding-top: var(--spacing-xs);
+  border-top: 1px solid var(--color-border);
+}
+
+.metadata-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  font-size: 0.75rem;
+}
+
+.metadata-key {
+  color: var(--color-text-secondary);
+}
+
+.metadata-value {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.voronoi-treemap-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  background: var(--color-surface-alt);
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legend-label {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+} 

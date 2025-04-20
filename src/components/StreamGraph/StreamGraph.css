@@ -1,0 +1,262 @@
+.stream-container {
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+}
+
+.stream-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.stream-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.stream-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-xs) 0 0;
+}
+
+.stream-visualization {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%;
+  margin-bottom: var(--spacing-lg);
+}
+
+.stream-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.stream-path {
+  transition: opacity 0.2s ease;
+  opacity: 0.7;
+}
+
+.stream-path:hover,
+.stream-path.hovered {
+  opacity: 1;
+}
+
+.stream-tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--spacing-sm);
+  transform: translate(-50%, -100%);
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-date {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.tooltip-series {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  font-size: 0.75rem;
+}
+
+.series-key {
+  color: var(--color-text-secondary);
+}
+
+.series-value {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.stream-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.legend-item:hover,
+.legend-item.hovered {
+  background: var(--color-surface-hover);
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legend-label {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.streamgraph-container {
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+}
+
+.streamgraph-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.streamgraph-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.streamgraph-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-xs) 0 0;
+}
+
+.streamgraph-visualization {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%;
+  margin-bottom: var(--spacing-lg);
+}
+
+.streamgraph-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-line {
+  stroke: var(--color-border);
+  stroke-opacity: 0.1;
+  stroke-dasharray: 2,2;
+}
+
+.layer-group {
+  cursor: pointer;
+}
+
+.layer-path {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.layer-group:hover .layer-path {
+  transform: translateY(-2px);
+}
+
+.layer-group.selected .layer-path {
+  transform: translateY(-4px);
+}
+
+.tick-line {
+  stroke: var(--color-border);
+  stroke-width: 1;
+}
+
+.tick-label {
+  font-size: 10px;
+  fill: var(--color-text-secondary);
+}
+
+.streamgraph-tooltip {
+  position: absolute;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: var(--spacing-sm);
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.tooltip-header {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.value-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  font-size: 0.75rem;
+}
+
+.value-row span:first-child {
+  color: var(--color-text-secondary);
+}
+
+.value-row span:last-child {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.streamgraph-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.legend-item:hover,
+.legend-item.hovered {
+  background: var(--color-surface-hover);
+}
+
+.legend-item.selected {
+  background: var(--color-surface-selected);
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legend-label {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}

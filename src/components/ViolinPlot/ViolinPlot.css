@@ -1,0 +1,183 @@
+.violin-plot-container {
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+}
+
+.violin-plot-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.violin-plot-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.violin-plot-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-xs) 0 0;
+}
+
+.violin-plot-visualization {
+  position: relative;
+  width: 100%;
+  padding-bottom: 60%;
+  margin-bottom: var(--spacing-lg);
+}
+
+.violin-plot-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-line {
+  stroke: var(--color-border);
+  stroke-opacity: 0.2;
+  stroke-dasharray: 2, 2;
+}
+
+.axis-label {
+  font-size: 12px;
+  fill: var(--color-text-secondary);
+}
+
+.x-axis-label {
+  font-size: 12px;
+  fill: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.violin-group {
+  transition: opacity 0.3s ease;
+}
+
+.violin-group:hover {
+  opacity: 0.8;
+}
+
+.violin-path {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.violin-group.hovered .violin-path {
+  opacity: 0.9;
+}
+
+.box-plot-line {
+  stroke: var(--color-text-primary);
+  stroke-width: 1;
+}
+
+.box-plot-box {
+  fill: var(--color-surface);
+  stroke: var(--color-text-primary);
+  stroke-width: 1;
+}
+
+.box-plot-median {
+  stroke: var(--color-text-primary);
+  stroke-width: 2;
+}
+
+.box-plot-mean {
+  fill: var(--color-accent);
+  stroke: var(--color-surface);
+  stroke-width: 1;
+}
+
+.violin-plot-tooltip {
+  position: absolute;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: var(--spacing-sm);
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-header {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.stat-row span:last-child {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.violin-plot-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  background: var(--color-surface-alt);
+}
+
+.legend-symbol {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.box-plot-symbol::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--color-text-primary);
+}
+
+.mean-symbol::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.density-symbol {
+  background: var(--color-text-secondary);
+  opacity: 0.7;
+  border-radius: 4px;
+}
+
+.legend-label {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,104 @@
+.circular-progress-container {
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+}
+
+.circular-progress-header {
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.circular-progress-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.circular-progress-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-xs) 0 0;
+}
+
+.circular-progress-visualization {
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-xl) 0;
+}
+
+.circular-progress-svg {
+  transform: rotate(-90deg);
+}
+
+.progress-background {
+  fill: none;
+  stroke: var(--color-surface-alt);
+}
+
+.segment-path {
+  fill: none;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.5s ease;
+}
+
+.progress-segment {
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.segment-label {
+  font-size: 12px;
+  font-weight: 500;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  transform: rotate(-90deg);
+}
+
+.total-label {
+  font-size: 14px;
+  fill: var(--color-text-secondary);
+  text-anchor: middle;
+  transform: rotate(90deg);
+}
+
+.total-value {
+  font-size: 24px;
+  font-weight: 600;
+  fill: var(--color-text-primary);
+  text-anchor: middle;
+  transform: rotate(90deg);
+}
+
+.circular-progress-legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legend-label {
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  flex: 1;
+}
+
+.legend-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+} 

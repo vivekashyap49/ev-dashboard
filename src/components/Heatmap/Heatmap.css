@@ -1,0 +1,131 @@
+.heatmap-container {
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+}
+
+.heatmap-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.heatmap-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.heatmap-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-xs) 0 0;
+}
+
+.heatmap-visualization {
+  position: relative;
+  padding: var(--spacing-lg) 0;
+}
+
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  gap: var(--spacing-md);
+}
+
+.y-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: var(--spacing-md);
+}
+
+.y-label {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  text-align: right;
+}
+
+.x-labels {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--spacing-md);
+}
+
+.x-label {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.heatmap-cells {
+  display: flex;
+  flex-direction: column;
+}
+
+.heatmap-row {
+  display: flex;
+  flex: 1;
+}
+
+.heatmap-cell {
+  position: relative;
+  border: 1px solid var(--color-surface);
+  transition: all 0.2s ease;
+}
+
+.heatmap-cell:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.cell-tooltip {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.75rem;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.heatmap-cell:hover .cell-tooltip {
+  opacity: 1;
+}
+
+.heatmap-legend {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.legend-gradient {
+  display: flex;
+  width: 200px;
+  height: 12px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.legend-color {
+  flex: 1;
+}
+
+.legend-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
